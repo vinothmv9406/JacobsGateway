@@ -1,6 +1,7 @@
 import { ArrowRight, ArrowUpRight, BadgeCheck, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { heroStats, siteConfig } from '@/data/siteConfig';
+import heroImage from '@/assets/hero-dubai-night.jpg';
 
 const Hero = () => {
   return (
@@ -80,16 +81,19 @@ const Hero = () => {
           <div className="lg:w-1/2 mt-16 lg:mt-0 animate-fade-in-right">
             <div className="relative max-w-md mx-auto animate-float">
               {/*
-                Placeholder stock image. Replace with the client's own licensed
-                photography (office, team, or a properly licensed Dubai skyline)
-                before launch — and keep the descriptive alt text for SEO.
+                Pexels stock (free for commercial use, no attribution required),
+                cropped to 4:5 and bundled locally so the largest above-the-fold
+                asset is not fetched from a third-party domain. Swap for the
+                client's own photography when it is available, keeping the
+                descriptive alt text for SEO.
               */}
               <img
-                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&h=800"
-                alt={`Sheikh Zayed Road and the Dubai skyline, where ${siteConfig.brandFull} advises on mainland and free zone company formation`}
+                src={heroImage}
+                alt={`The Burj Khalifa and Downtown Dubai at night, where ${siteConfig.brandFull} advises on mainland and free zone company formation`}
                 width={448}
                 height={560}
                 loading="eager"
+                fetchPriority="high"
                 className="rounded-sm shadow-[0_50px_90px_-30px_rgba(10,18,32,0.7)] border border-jg-gold-light/15 w-full object-cover"
               />
               <div className="absolute -right-6 -bottom-6 bg-jg-ink/60 backdrop-blur-md rounded-sm p-4 border border-jg-gold-light/20 shadow-lg">
