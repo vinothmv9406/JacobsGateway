@@ -1,0 +1,7 @@
+# Jacob's Gateway - business setup consultants, Dubai & Saudi Arabia
+# Replace the sitemap host with the live domain before launch.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.jacobsgateway.com/sitemap.xml

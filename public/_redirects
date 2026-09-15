@@ -1,0 +1,8 @@
+# SPA history fallback. Without a rule like this, /terms, /privacy and
+# /cookies return 404 on the live host because no such files exist on disk.
+# This file is read by Netlify and Cloudflare Pages. Other hosts need their
+# own equivalent:
+#   Vercel   -> "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+#   nginx    -> try_files $uri $uri/ /index.html;
+#   Apache   -> FallbackResource /index.html
+/*  /index.html  200
